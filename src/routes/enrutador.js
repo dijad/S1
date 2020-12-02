@@ -4,8 +4,10 @@ const router = Router()
 
 const controlador = require('../models/controlador.js')
 
-router.get('/GnormalStd', logic.generateNormalStdNumbers)
-router.get('/Pchi2', logic.testingChi2)
-router.get('/Pvarianza', logic.testingVarianza)
+var cors = require('cors')
+
+router.get('/GnormalStd', cors() ,logic.generateNormalStdNumbers)
+router.get('/Pchi2', cors(), logic.testingChi2)
+router.get('/Pvarianza', cors(), logic.testingVarianza)
 
 module.exports = router

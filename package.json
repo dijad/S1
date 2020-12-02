@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-	"start": "node src/index.js"
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,7 @@
     "chi-square": "0.0.1",
     "chi-squared": "^1.1.0",
     "chi-squared-test": "^1.1.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "gamma": "^1.0.0",
     "mathjs": "^8.0.1",
