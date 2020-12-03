@@ -6,6 +6,9 @@ const logic = {}
 //************Normal***************/
 logic.generateNormalStdNumbers = (req, res) => {
     var ri = req.body.ri
+    for(let i = 0; i < ri.length; i++){
+        ri[i] = Number.parseFloat(ri[i])
+    }
     var numIntervalos = Number.parseFloat(req.body.numIntervalos)
 
     var media = math.mean(ri)
@@ -78,6 +81,9 @@ function countFrecuency(intervalos, ni, frecuencias){
 //***************Chi2***********************/
 logic.testingChi2 = (req, res) => {
     var ri = req.body.ri
+    for(let i = 0; i < ri.length; i++){
+        ri[i] = Number.parseFloat(ri[i])
+    }
     var numIntervalos = Number.parseFloat(req.body.numIntervalos) 
     var a = Number.parseFloat(req.body.a)
     var b = Number.parseFloat(req.body.b)
@@ -197,6 +203,9 @@ function calcNiNormal(a,b,ri,ni){
 //***************Prueba de medias***********************/
 logic.testingVarianza = (req, res) => {
     var ri = req.body.ri
+    for(let i = 0; i < ri.length; i++){
+        ri[i] = Number.parseFloat(ri[i])
+    }
     var mError = Number.parseFloat(req.body.mError)
 
     var n = ri.length
